@@ -1,7 +1,7 @@
 ---
 name: nyratlas
 description: Read and edit a NyrAtlas outside-plant fiber project through the person's own signed-in browser tab. Use when asked to look at or change enclosures, cables, splices, splitters, trunks, planned or installed work, or history in a NyrAtlas project, or to bring a project into NyrAtlas from another tool. Needs a browser tool that can run JavaScript in the tab where the person is signed in to NyrAtlas; without one, the skill can still write a plan for the person to paste.
-license: Proprietary. Free to install and use with NyrAtlas; see INSTALL.md.
+license: Proprietary. Free to install and use with NyrAtlas; see LICENSE.md.
 metadata:
   version: 0.1.0
   homepage: https://nyratlas.com/skill/SKILL.md
@@ -110,3 +110,4 @@ confirms the preview. You read the other tool's project out of its own tab, neve
   tool's evaluate call. Each one says what it does at the top and writes nothing except
   `save-state.js`, which writes only when you call `window.nyr.save`.
 - `INSTALL.md`: where to put this folder for the agent you use. `CHANGELOG.md`: what changed.
+- `LICENSE.md`: the terms. Proprietary; copy and use with NyrAtlas, nothing else.

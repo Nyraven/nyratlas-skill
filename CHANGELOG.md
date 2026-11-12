@@ -11,3 +11,4 @@ First version. Outside-plant projects only.
 - Scripts for the tab's console: `session.js`, `read-state.js`, `save-state.js`,
   `verify-enclosure.js`.
 - Install notes for the agents people use.
+- `LICENSE.md`: proprietary, free to copy and use with NyrAtlas and nothing else.
