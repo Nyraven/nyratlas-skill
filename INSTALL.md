@@ -3,7 +3,7 @@
 The skill is a folder: `SKILL.md`, `references/`, `scripts/`. Every agent that reads the
 SKILL.md format takes the same folder. The canonical copy is at
 https://nyratlas.com/skill/ (each file at its path under that), and the same folder is
-mirrored on GitHub so it can be cloned.
+mirrored at https://github.com/Nyraven/nyratlas-skill so it can be cloned.
 
 Whatever the agent, two things are always true:
 

@@ -6,6 +6,7 @@ metadata:
   version: 0.1.0
   homepage: https://nyratlas.com/skill/SKILL.md
   contract: https://nyratlas.com/agents.md
+  repository: https://github.com/Nyraven/nyratlas-skill
   scope: ospmap
 ---
 
