@@ -12,3 +12,6 @@ First version. Outside-plant projects only.
   `verify-enclosure.js`.
 - Install notes for the agents people use.
 - `LICENSE.md`: proprietary, free to copy and use with NyrAtlas and nothing else.
+- `.claude-plugin/`: the folder is a Claude Code plugin and its own marketplace, so
+  `claude plugin install nyratlas --marketplace Nyraven/nyratlas-skill` works; INSTALL.md gains
+  the one-command `npx skills add Nyraven/nyratlas-skill` and the exact Codex paths.

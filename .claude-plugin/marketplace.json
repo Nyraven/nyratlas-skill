@@ -1,0 +1,8 @@
+{
+  "name": "nyratlas",
+  "owner": { "name": "Nyraven LLC", "url": "https://nyraven.com" },
+  "metadata": { "description": "The NyrAtlas agent skill, served from nyratlas.com/skill/ and mirrored at github.com/Nyraven/nyratlas-skill." },
+  "plugins": [
+    { "name": "nyratlas", "source": "./", "description": "Work inside a NyrAtlas outside-plant fiber project from the person's signed-in browser tab." }
+  ]
+}

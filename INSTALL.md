@@ -13,10 +13,23 @@ Whatever the agent, two things are always true:
 - The skill grants no access. It uses the person's own signed-in session and their own
   permissions. There is nothing to configure and no key to paste.
 
+## One command, most agents
+
+The open `skills` CLI installs a skill from its GitHub repository into the folder each agent
+reads (Claude Code, Codex, Cursor, OpenCode and others):
+
+```
+npx skills add Nyraven/nyratlas-skill
+```
+
+Add `-a claude-code` or `-a codex` to pick one agent, `-g` to install for every project.
+
 ## Claude
 
-- **Claude Code.** Copy the folder to `~/.claude/skills/nyratlas/` (for every project) or to
-  `.claude/skills/nyratlas/` inside a project. It is picked up on the next session and
+- **Claude Code.** Either the command above, or install it as a plugin, which also keeps it
+  updated: `claude plugin install nyratlas --marketplace Nyraven/nyratlas-skill` (the repository
+  is its own marketplace). Or copy the folder to `~/.claude/skills/nyratlas/` (for every project)
+  or `.claude/skills/nyratlas/` inside a project. It is picked up on the next session and
   triggers on NyrAtlas tasks. Drive the signed-in tab through Claude in Chrome or the desktop
   app's browser.
 - **Claude in Chrome, Claude desktop browser.** No install is needed: the agent is already in
@@ -35,10 +48,10 @@ be one where the person is signed in to NyrAtlas.
 
 ## Codex and ChatGPT
 
-- **Codex (CLI or IDE).** Codex reads `SKILL.md` skills from its skills folder. Put this
-  folder there under `nyratlas/` (check the skills location for your Codex version), or
-  reference the procedure from your `AGENTS.md`. Codex needs a browser tool to act in the
-  signed-in tab; without one it can only write plans.
+- **Codex (CLI or IDE).** Codex reads `SKILL.md` skills from `.agents/skills/` in the
+  repository you are in and from `~/.agents/skills/` for every project. Put this folder there
+  under `nyratlas/`, or run `npx skills add Nyraven/nyratlas-skill -a codex`. Codex needs a
+  browser tool to act in the signed-in tab; without one it can only write plans.
 - **ChatGPT.** A chat-only session cannot operate the project. Paste `SKILL.md` and
   `references/import-plan.md` into the project or custom instructions and it will write
   plans in the right shape for the Import page, and read back a project's state when the

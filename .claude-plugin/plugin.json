@@ -1,0 +1,15 @@
+{
+  "name": "nyratlas",
+  "displayName": "NyrAtlas",
+  "version": "0.1.0",
+  "description": "Read and edit a NyrAtlas outside-plant fiber project through the person's own signed-in browser tab: enclosures, cables, splices, splitters, trunks, planned and installed work, history, and bringing a project in from another tool.",
+  "author": { "name": "Nyraven LLC", "url": "https://nyraven.com" },
+  "homepage": "https://nyratlas.com/fiber-mapping-with-ai",
+  "repository": "https://github.com/Nyraven/nyratlas-skill",
+  "license": "LicenseRef-Proprietary",
+  "keywords": ["fiber", "outside-plant", "osp", "splicing", "enclosures", "telecom", "nyratlas"],
+  "documentationUrl": "https://nyratlas.com/skill/SKILL.md",
+  "supportUrl": "https://nyratlas.com/contact",
+  "privacyPolicyUrl": "https://nyratlas.com/privacy",
+  "termsOfServiceUrl": "https://nyratlas.com/terms"
+}
