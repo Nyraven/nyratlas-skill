@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.1
+
+- An agent that has NyrAtlas as an MCP server is told to use it: the server's tools, the
+  `read-docs` tool or `/mcp.md` for the contract, no signed-in tab needed and none to wait
+  for. The browser procedure is for working without a token. An agent holding both had read
+  the old text as "the tab or nothing" and stopped.
+
 ## 0.1.0
 
 First version. Outside-plant projects only.

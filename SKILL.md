@@ -1,9 +1,9 @@
 ---
 name: nyratlas
-description: Read and edit a NyrAtlas outside-plant fiber project through the person's own signed-in browser tab. Use when asked to look at or change enclosures, cables, splices, splitters, trunks, planned or installed work, or history in a NyrAtlas project, or to bring a project into NyrAtlas from another tool. Needs a browser tool that can run JavaScript in the tab where the person is signed in to NyrAtlas; without one, the skill can still write a plan for the person to paste.
+description: Read and edit a NyrAtlas outside-plant fiber project through the person's own signed-in browser tab. Use when asked to look at or change enclosures, cables, splices, splitters, trunks, planned or installed work, or history in a NyrAtlas project, or to bring a project into NyrAtlas from another tool. Needs a browser tool that can run JavaScript in the tab where the person is signed in to NyrAtlas; without one, the skill can still write a plan for the person to paste. If NyrAtlas is one of your MCP servers (tools like list-projects and save-enclosure), use those tools instead and read /mcp.md; this skill is for working without a token.
 license: Proprietary. Free to install and use with NyrAtlas; see LICENSE.md.
 metadata:
-  version: 0.1.0
+  version: 0.1.1
   homepage: https://nyratlas.com/skill/SKILL.md
   contract: https://nyratlas.com/agents.md
   repository: https://github.com/Nyraven/nyratlas-skill
@@ -16,9 +16,21 @@ NyrAtlas draws outside-plant fiber as enclosures, cables, tubes, strands and spl
 web browser. This skill is how an agent works inside one of its projects: as the person, in
 the tab where they are signed in, with the permissions they have and no others.
 
+## If NyrAtlas is one of your MCP servers
+
+Then this skill is not your way in. NyrAtlas has an MCP server (`https://nyratlas.com/mcp`)
+that a person connects with a click or a token, and when its tools are in your toolset
+(`list-projects`, `get-project`, `get-enclosure`, `save-enclosure`, `add-trunk` and the rest),
+use those: they run the same controllers behind the same permission gates, settle each save
+before they answer, and need no browser tab at all. Read the contract with the `read-docs`
+tool (page `mcp`) or at `/mcp.md`, and follow it. Do not wait for a signed-in tab, and do not
+ask the person to open one; the token is the sign-in. The procedure below is for an agent with
+no token, working in the tab where the person is signed in.
+
 ## When this applies
 
-- The person has a NyrAtlas tab open and signed in, and you can run JavaScript in it.
+- You have no NyrAtlas MCP server, and the person has a NyrAtlas tab open and signed in, and
+  you can run JavaScript in it.
 - The project is an outside-plant map (`type: "ospmap"`). Data center projects are not
   covered by this version; leave them alone.
 - Not for signing in, registering, two-factor, passwords, billing, organization members or
@@ -33,7 +45,8 @@ the tab where they are signed in, with the permissions they have and no others.
   A draft the person may not see does not exist for you. This skill grants nothing.
 - The contract is the live page: **read `/agents.md` from the same site first** and prefer it
   over anything in this folder. The routes, bodies and answers there are checked against the
-  running server on every deploy; this skill is the way to work them.
+  running server on every deploy; this skill is the way to work them. (`/mcp.md` is the same
+  contract for an MCP client; it does not apply in the tab.)
 
 ## Procedure
 

@@ -1,7 +1,7 @@
 {
   "name": "nyratlas",
   "displayName": "NyrAtlas",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Read and edit a NyrAtlas outside-plant fiber project through the person's own signed-in browser tab: enclosures, cables, splices, splitters, trunks, planned and installed work, history, and bringing a project in from another tool.",
   "author": { "name": "Nyraven LLC", "url": "https://nyraven.com" },
   "homepage": "https://nyratlas.com/fiber-mapping-with-ai",

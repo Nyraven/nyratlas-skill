@@ -1,3 +1,10 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/nyratlas-mark-dark.png">
+    <img src="assets/nyratlas-mark-light.png" width="96" alt="NyrAtlas">
+  </picture>
+</p>
+
 # NyrAtlas agent skill
 
 The official skill for working inside a [NyrAtlas](https://nyratlas.com) outside-plant fiber
@@ -5,8 +12,10 @@ project with an AI agent: Claude (Claude Code, Claude in Chrome, the desktop app
 Codex, ChatGPT agent mode, and any other agent that reads the `SKILL.md` convention.
 
 The agent works as the person, in the browser tab where they are already signed in, with the
-permissions they have and no others. There is no API key, no token to paste, and nothing to
-configure. The server decides what the agent may do, exactly as it does for the person.
+permissions they have and no others: no API key, no token to paste, nothing to configure. (An
+agent that holds a NyrAtlas MCP token uses the MCP server instead; `SKILL.md` says so, and the
+contract for that door is at [nyratlas.com/mcp.md](https://nyratlas.com/mcp.md).) The server
+decides what the agent may do, exactly as it does for the person.
 
 ## What is in the folder
 
