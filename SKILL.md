@@ -3,7 +3,7 @@ name: nyratlas
 description: Read and edit a NyrAtlas outside-plant fiber project through the person's own signed-in browser tab. Use when asked to look at or change enclosures, cables, splices, splitters, trunks, planned or installed work, or history in a NyrAtlas project, or to bring a project into NyrAtlas from another tool. Needs a browser tool that can run JavaScript in the tab where the person is signed in to NyrAtlas; without one, the skill can still write a plan for the person to paste. If NyrAtlas is one of your MCP servers (tools like list-projects and save-enclosure), use those tools instead and read /mcp.md; this skill is for working without a token.
 license: Proprietary. Free to install and use with NyrAtlas; see LICENSE.md.
 metadata:
-  version: 0.1.1
+  version: 0.1.2
   homepage: https://nyratlas.com/skill/SKILL.md
   contract: https://nyratlas.com/agents.md
   repository: https://github.com/Nyraven/nyratlas-skill
@@ -64,6 +64,14 @@ no token, working in the tab where the person is signed in.
    any `restore`; `PATCH /map/{map}/enclosures/mark`; creating a project or confirming an
    import; a save that removes a cable or a splice that was there; `PATCH /map/{map}/settings`.
    Adding a cable, a splice or a trunk, and moving a node, are not destructive.
+   Existing data is never a placeholder: whatever an enclosure, cable, splice or trunk is
+   called, however old it is or how few saves it has, it is the user's or the organization's
+   work. Do not clear, replace, delete or repurpose anything that exists unless the person has
+   authorized it explicitly, naming the object or the bounded batch and the destructive
+   operation itself. A request to build or update something is not that permission, and that
+   a version can be restored afterward is not permission either. When in doubt, add beside it
+   and ask. Use only the access you were given: never another person's browser session,
+   token or credentials.
 5. **Write.** One enclosure per save, through `window.nyr.save(...)` (`scripts/save-state.js`),
    which reads, applies your change, sends the whole document with the `version` it read,
    and keeps every field it did not set. New cable ids are `cable_seq + 1`; `cable_seq` never

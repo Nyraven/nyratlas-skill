@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.2
+
+- The plan step says what destructive means: existing data is never a placeholder, whatever
+  it is called or however little-saved; nothing that exists is cleared, replaced, deleted or
+  repurposed without the person's explicit authorization naming the object or the bounded
+  batch and the operation; a request to build or update is not that permission, and neither
+  is restorable history; when in doubt, add beside it and ask. Only the access given, never
+  another person's session, token or credentials. The same section is on /agents.md and
+  /mcp.md.
+
 ## 0.1.1
 
 - An agent that has NyrAtlas as an MCP server is told to use it: the server's tools, the
